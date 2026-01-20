@@ -728,7 +728,7 @@
 .final
 {
     position: relative;
-    background-image: url(/img/hero.jpg);
+    background-image: url(img/hero.jpg);
     width: 90%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -888,4 +888,5 @@
      {
         grid-template-columns: repeat(2,1fr);
      }
+
 }
