@@ -1,0 +1,163 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    list-style: none;
+    text-decoration: none;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: var(--font-main);
+    height: 100%;
+    background-color: var(--bg);
+}
+
+header
+{
+    width: min(100%, 1500px);
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    /* padding: var(--space-xs); */
+}
+
+.nav-list
+{
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    top: 5rem;
+    /* padding: var(--space-xs); */
+    gap: var(--space-mm);
+    background-color: var(--surface);
+    /* height: calc(100vh - 5rem); */
+    height: 0;
+    /* pointer-events: none; */
+    transition: all 0.3s ease;
+}
+
+
+
+.nav-list--show
+{
+    height: calc(100vh - 5rem);
+    /* height: 100vh; */
+}
+
+
+.logo
+{
+    height: 45px;
+    width: 120px;
+}
+
+.container-icons
+{
+    padding-right: var(--space-xs);
+    cursor: pointer;
+}
+
+.logo,
+.close-icon,
+.list-icon
+{
+    color: var(--text);
+}
+
+.close-icon
+{
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.close-icon-show
+{
+    display: flex;
+}
+
+.list-icon
+{
+    transition: all 0.3s ease;
+}
+
+.list-icon-hide
+{
+    display: none;
+}
+
+.nav-list a
+{
+    color: var(--text);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+}
+
+.nav-list li
+{
+    transition: transform 0.5 ease;
+}
+
+.nav-list li:hover
+{
+    transform: scale(1.1);
+}
+
+@media (min-width: 1024px) 
+{
+
+.container-icons
+{
+    display: none;
+}
+
+.navbar
+{
+  max-width: 81.25rem;
+  margin: 0 auto;
+}
+
+.nav-list
+{
+    position: static;
+    display: flex;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    padding-right:  var(--space-mm);
+    pointer-events: auto;
+}
+
+.nav-list a
+{
+    font-size: var(--fs-text);
+}
+
+.logo
+{
+    height: 50px;
+    width: 180px;
+}
+}
