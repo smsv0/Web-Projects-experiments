@@ -693,20 +693,18 @@
     align-items: center;
     margin-top: 15px;
     text-align: center;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .icon-fq
 {
-    /* height: 20px;
-    width: 20px; */
     color: white;
     font-size: 20px;
 }
 
 .faq-question p
 {
-    font-size: var(--fs-body);
+    font-size: var(--fs-text);
     font-weight: 600;
 }
 
@@ -890,4 +888,5 @@
      }
 
 }
+
 
